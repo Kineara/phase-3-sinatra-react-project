@@ -5,7 +5,7 @@ class CreateMotorcycles < ActiveRecord::Migration[6.1]
       t.string :model 
       t.integer :year
       t.string :nickname
-      t.integer :owner_id
+      t.integer :user_id
       t.datetime :owned_since
       t.timestamps
     end
