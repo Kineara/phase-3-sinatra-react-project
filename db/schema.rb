@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_215758) do
     t.string "make"
     t.string "model"
     t.integer "year"
+    t.string "nickname"
     t.integer "owner_id"
     t.datetime "owned_since"
     t.datetime "created_at", precision: 6, null: false
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_215758) do
     t.string "make"
     t.string "model"
     t.integer "year"
+    t.string "nickname"
     t.integer "owner_id"
     t.datetime "owned_since"
     t.datetime "created_at", precision: 6, null: false

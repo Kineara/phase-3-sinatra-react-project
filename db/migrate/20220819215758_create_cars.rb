@@ -4,6 +4,7 @@ class CreateCars < ActiveRecord::Migration[6.1]
       t.string :make
       t.string :model
       t.integer :year
+      t.string :nickname
       t.integer :owner_id 
       t.datetime :owned_since
       t.timestamps
