@@ -1,6 +1,6 @@
 # MotoAssist Backend
 
-Front End Repo - https://github.com/Kineara/flatiron-phase3-frontend
+Front End Repo - https://github.com/Kineara/MotoAssist_frontend
 
 ## User Experience
 User should be able to create an individual profile for each vehicle, and then store maintenance data about that vehicle in the database. Users should be able to create a vehicle, or select one from the NHTSA vehicle database to prepopulate information. 
