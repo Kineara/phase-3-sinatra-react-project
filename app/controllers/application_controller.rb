@@ -15,12 +15,8 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
-  get "/motorcycles" do 
-    Motorcycle.all.to_json
-  end
-
-  get "/cars" do 
-    Car.all.to_json
+  get "/vehicles" do 
+    Vehicle.all.to_json
   end
 
   get "/tasks" do

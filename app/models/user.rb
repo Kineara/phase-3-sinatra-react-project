@@ -1,4 +1,3 @@
 class User < ActiveRecord::Base 
-  has_many :cars 
-  has_many :motorcycles
+  has_many :vehicles
 end

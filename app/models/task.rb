@@ -1,4 +1,3 @@
 class Task < ActiveRecord::Base 
-  belongs to :car 
-  belongs to :motorcycle 
+  belongs_to :vehicle
 end
