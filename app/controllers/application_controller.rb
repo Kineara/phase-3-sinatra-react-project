@@ -40,6 +40,7 @@ class ApplicationController < Sinatra::Base
     task.update(
       completed: params[:completed]
     )
-    task.to_json
+    vehicle = Vehicle.find(task.vehicle_id)
+    vehicle.to_json
   end
 end
