@@ -3,10 +3,11 @@ class CreateTasks < ActiveRecord::Migration[6.1]
     create_table :tasks do |t|
       t.string :name
       t.string :description
+      t.string :category
       t.datetime :date_due
-      t.datetime :last_done
-      t.integer :price
       t.integer :vehicle_id
+      t.boolean :completed
+      t.datetime :last_completed
       t.timestamps 
     end
   end
