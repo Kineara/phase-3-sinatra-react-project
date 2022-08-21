@@ -7,7 +7,6 @@ class CreateTasks < ActiveRecord::Migration[6.1]
       t.datetime :date_due
       t.integer :vehicle_id
       t.boolean :completed
-      t.datetime :last_completed
       t.timestamps 
     end
   end

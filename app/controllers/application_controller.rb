@@ -10,14 +10,11 @@ class ApplicationController < Sinatra::Base
     user.to_json(include: :vehicles)
   end
 
-  delete '/users/:id' do
-    user = User.find(params[:id])
-    user.destroy
-    user.to_json
-  end
-
-  get '/vehicles' do
-    Vehicle.all.to_json
+  post '/users' do 
+    user = User.create(
+      name: params[:name]
+    )
+    user.to_json 
   end
 
   get '/vehicles/:id' do
@@ -31,21 +28,18 @@ class ApplicationController < Sinatra::Base
     tasks.to_json
   end
 
-  delete '/vehicles/:id' do
-    vehicle = Vehicle.find(params[:id])
-    vehicle.destroy
-    vehicle.to_json
-  end
-
-  get '/tasks' do
-    Task.all.to_json
-  end
-
   patch '/tasks/:id' do
     task = Task.find(params[:id])
     task.update(
       completed: params[:completed]
     )
+    vehicle = Vehicle.find(task.vehicle_id)
+    vehicle.get_tasks.to_json
+  end
+
+  delete '/tasks/:id' do
+    task = Task.find(params[:id])
+    task.destroy 
     vehicle = Vehicle.find(task.vehicle_id)
     vehicle.get_tasks.to_json
   end
