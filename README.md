@@ -2,26 +2,31 @@
 
 Front End Repo - https://github.com/Kineara/MotoAssist_frontend
 
-## User Experience
-User should be able to create an individual profile for each vehicle, and then store maintenance data about that vehicle in the database. Users should be able to create a vehicle, or select one from the NHTSA vehicle database to prepopulate information. 
+## Use
+  Install dependencies
+  ```bundle install```
+  
+  Complete migrations
+  ```bundle exec rake db:migrate```
 
-NHTSA API - https://vpic.nhtsa.dot.gov/api/
+  Seed the database
+  ```bundle exec rake db:seed```
 
-## Models
-User
-Motorcycle
-Car
-Task
+  Start the server
+  ```bundle exec rake server```
 
-Tasks
-
+  Reset the database to the original seed data
+  ```bundle exec rake db:reset```
 
 ## Endpoints
-/user
+  Add, edit, or delete user profiles
+  ```/users```
 
+  Add, edit, or delete vehicle profiles
+  ```/vehicles```
 
-## Relationships
-A Motorcycle/Car has many Tasks
-Each Task belongs to a Motorcycle/Car
-Each Motorcycle/Car belongs to a User
-A User has many Motorcycle/Cars
+  Get all maintenance tasks related to a specific vehicle ID
+  ```/vehicles/:id/tasks```
+
+  Add, edit, or delete maintenance tasks
+  ```/tasks```
