@@ -17,6 +17,12 @@ class ApplicationController < Sinatra::Base
     user.to_json 
   end
 
+  delete '/users/:id' do 
+    user = User.find(params[:id])
+    user.destroy 
+    user.to_json
+  end
+
   get '/vehicles/:id' do
     vehicle = Vehicle.find(params[:id])
     vehicle.to_json(include: :tasks)
