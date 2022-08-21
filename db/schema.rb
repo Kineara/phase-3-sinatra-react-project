@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_225101) do
     t.string "name"
     t.string "description"
     t.string "category"
-    t.datetime "date_due"
+    t.string "date_due"
     t.integer "vehicle_id"
     t.boolean "completed"
     t.datetime "created_at", precision: 6, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_225101) do
     t.integer "year"
     t.string "nickname"
     t.integer "user_id"
-    t.datetime "owned_since"
+    t.string "owned_since"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

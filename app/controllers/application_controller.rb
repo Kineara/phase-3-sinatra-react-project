@@ -47,6 +47,18 @@ class ApplicationController < Sinatra::Base
     vehicle.to_json
   end
 
+  post '/tasks' do 
+    task = Task.create(
+      name: params[:name],
+      description: params[:description],
+      category: params[:category],
+      date_due: params[:date_due],
+      vehicle_id: params[:vehicle_id],
+      completed: false
+    )
+    task.to_json
+  end
+
   patch '/tasks/:id' do
     task = Task.find(params[:id])
     task.update(

@@ -7,7 +7,7 @@ class CreateVehicles < ActiveRecord::Migration[6.1]
       t.integer :year
       t.string :nickname
       t.integer :user_id
-      t.datetime :owned_since
+      t.string :owned_since
       t.timestamps
     end
   end
